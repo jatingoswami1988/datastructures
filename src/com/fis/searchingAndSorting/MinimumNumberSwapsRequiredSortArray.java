@@ -10,8 +10,8 @@ public class MinimumNumberSwapsRequiredSortArray {
 
 		// BruteForceApproach
 
-		// int arr[] = { 4, 3, 2, 1 };
-		int arr[] = { 101, 758, 315, 730, 472, 619, 460, 479 };
+		 int arr[] = { 4, 3, 2, 1 };
+		//int arr[] = { 101, 758, 315, 730, 472, 619, 460, 479 };
 		//[101, 315, 460, 472, 479, 619, 730, 758]
 		//int arr[] = { 1, 5, 4, 3, 2 };
 
@@ -22,9 +22,10 @@ public class MinimumNumberSwapsRequiredSortArray {
 		int tempArray[] = new int[arr.length];
 		tempArray = Arrays.copyOf(arr, arr.length);
 		Arrays.sort(tempArray);
+		
 		Map<Integer, Integer> result = new HashMap<Integer, Integer>();
-		for (int i = 0; i < tempArray.length; i++) {
-			result.put(tempArray[i], i);
+		for (int i = 0; i < arr.length; i++) {
+			result.put(arr[i], i);
 		}
 
 		int counter = 0;

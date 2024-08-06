@@ -1,18 +1,35 @@
 package com.fis.Arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Practice {
 
 	public static void main(String args[]) {
 
-		
-		
-		
-		
-		
+		List<List<Integer>> finalList = new ArrayList<>();
+		int arr[] = { 1, 2, 3, 3 };
+		R(finalList, arr, 0, 0, 6, new ArrayList<>());
+		System.out.println(finalList);
+
+	}
+
+	private static void R(List<List<Integer>> finalList, int arr[], int index, int sum, int targetSum,
+			List<Integer> output) {
+		if (sum == targetSum) {
+			finalList.add(output);
+			return;
+		}
+
+		if (index == arr.length) {
+			return;
+		}
+		R(finalList, arr, index + 1, sum, targetSum, new ArrayList<>(output));
+		output.add(arr[index]);
+		R(finalList, arr, index + 1, sum + arr[index], targetSum, new ArrayList<>(output));
 	}
 
 	public static int[] intersection(int[] nums1, int[] nums2) {
