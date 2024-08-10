@@ -7,6 +7,7 @@ public class Bridge {
 	static private int V = 5;
 	static int time = 0;
 	
+	
 	public static void main(String[] args) {
 		System.out.println("Bridges in first graph ");
 		Graph g1 = new Graph(5);
